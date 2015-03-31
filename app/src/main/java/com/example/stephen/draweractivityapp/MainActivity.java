@@ -61,20 +61,17 @@ public class MainActivity extends ActionBarActivity
         //can use number as length of the list of rocks.
         //then the mTitles be obtained from that list of rocks
         //i.e. mTitle =
-        ArrayList<String> stringList = new ArrayList<String>();
-        stringList.add("Rock 1"); // these change the title at the top, not the
-        //section name in the bar, those are in strings.xml
-        stringList.add("Rock 2");
-        stringList.add("Rock 3");
+        // Ok, so in resources will be xml files that have the information
+        //about the rocks, and the titles can be extracted from there.
         switch (number) {
             case 1:
-                mTitle = stringList.get(number - 1 ) ;
+                mTitle = getResources().getString(R.string.title_section1);
                 break;
             case 2:
-                mTitle = stringList.get(number - 1 ) ;
+                mTitle = getResources().getString(R.string.title_section2);
                 break;
             case 3:
-                mTitle = stringList.get(number - 1 ) ;
+                mTitle = getResources().getString(R.string.title_section3);
                 break;
         }
     }
